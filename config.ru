@@ -1,2 +1,2 @@
-require 'searcher'
+require './searcher'
 run Sinatra::Application
