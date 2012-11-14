@@ -1,0 +1,71 @@
+
+@font-face {
+    font-family: 'abadi_mt_condensed_light';
+    src: url("Abadi_MT_Condensed_Light.ttf") format("truetype");
+}
+
+body {
+    background-image: url("../img/bg.jpg");
+}
+
+h1 {
+    font-family: abadi_mt_condensed_light;
+    font-size: 25px;
+    text-decoration: none;
+    text-align: center;
+    font-style: normal;
+}
+
+.colunas {
+    width: 43.5%;
+    margin: 0 auto;
+    min-width: 894px;
+}
+
+.google {
+    float: left;
+}
+
+.twitter {
+    float: left;
+}
+
+.celula {
+    height: 97px;
+    width: 437px;
+    margin: 5px; 
+}
+
+.celula .titulo{
+    height: 70px;
+    max-height: 70px;
+}
+
+.celula p{
+    font-family: abadi_mt_condensed_light;
+    color: white;
+    font-size: 15px;
+    margin: 7px;
+    text-align: left;
+}
+
+.twitter .celula {
+    background: #17a2e7;
+}
+.google .celula {
+    background: #90d72e;
+}
+
+.google .primaria {
+    background-image: url("../img/google.png");
+    background-repeat:  no-repeat;
+    background-position: right bottom;
+}
+
+.twitter .primaria {
+    background-image: url("../img/twitter.png");
+    background-repeat:  no-repeat;
+    background-position: right bottom;
+}
+
+

@@ -1,25 +1,37 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Searcher</title>
-</head>
-<body>
-  <h1>Tweets</h1>
-  <% @tweets.each do |tweet| %>
-    <p>
-      <%= tweet[:from] %>
-    </p>
-    <p>
-      <%= tweet[:text] %>
-    </p>
-  <% end %>
-  <h1>Googles</h1>
-  <% @googles.each do |goos| %>
-    <p>
-      <%= goos[:title] %>
-    </p>
-    <p>
-      <%= goos[:content] %>
-    </p>
-  <% end %>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="css/estilo.css" />
+    </head>
+    <body>
+        <h1>ManySearcher</h1>
+        <div class="colunas">
+            <div class="google">
+                <% @googles.each do |goos| %>
+                <div class="celula primaria">
+                    <p class="titulo">
+                        <%= goos[:title] %>
+                    </p>
+                    <p class="">
+                        <%= goos[:content] %>
+                    </p>
+                </div>
+                <% end %>
+            </div>
+            <div class="twitter">
+                <% @tweets.each do |tweet| %>
+                <div class="celula primaria">
+                    <p class="titulo">
+                        <%= tweet[:from] %>
+                    </p>
+                    <p class="">
+                        <%= tweet[:text] %>
+                    </p>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </body>
 </html>

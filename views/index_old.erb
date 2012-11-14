@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>Searcher</title>
+</head>
+<body>
+  <h1>Tweets</h1>
+  <% @tweets.each do |tweet| %>
+    <p>
+      <%= tweet[:from] %>
+    </p>
+    <p>
+      <%= tweet[:text] %>
+    </p>
+  <% end %>
+  <h1>Googles</h1>
+  <% @googles.each do |goos| %>
+    <p>
+      <%= goos[:title] %>
+    </p>
+    <p>
+      <%= goos[:content] %>
+    </p>
+  <% end %>
+</body>
+</html>
