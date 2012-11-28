@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
-        <link rel="stylesheet" href="/css/estilo.css" />
-    </head>
-    <body>
-        <h1>ManySearcher</h1>
-        <div class="colunas">
-            <div class="google">
-                <% @googles.each_with_index do |goos, ind| %>
-                <a href='<%= goos[:url] %>'>
-                    <div class= "<%= (ind == 0 ? 'celula primaria' : 'celula') %>">
-                        <p class="titulo">
-                            <%= goos[:title] %>
-                        </p>
-                        <p class="">
-                            <%= goos[:content] %>
-                        </p>
-                    </div>
-                </a>
-                <% end %>
-            </div>
-            <div class="twitter">
-                <% @tweets.each_with_index do |tweet, ind| %>
-                <a href='<%= "https:\\www.twitter.com/#{tweet[:from]}/status/#{tweet[:id]}" %>'>
-                    <div class= "<%= (ind == 0 ? 'celula primaria' : 'celula') %>">
-                        <p class="titulo">
-                            <%= tweet[:from] %>
-                        </p>
-                        <p class="">
-                            <%= tweet[:text] %>
-                        </p>
-                    </div>
-                </a>
-                <% end %>
-            </div>
-        </div>
-    </body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ManySearcher</title>
+    <link rel="stylesheet" href="/css/estilo.css" />
+  </head>
+  <body>
+    <h1>ManySearcher</h1>
+    <div class="colunas">
+      <div class="google">
+        <% @googles.each_with_index do |goos, ind| %>
+        <a href='<%= goos[:url] %>'>
+          <div class= "<%= (ind == 0 ? 'celula primaria' : 'celula') %>">
+            <p class="titulo">
+              <%= goos[:title] %>
+            </p>
+            <p class="">
+              <%= goos[:content] %>
+            </p>
+          </div>
+        </a>
+        <% end %>
+      </div>
+      <div class="twitter">
+        <% @tweets.each_with_index do |tweet, ind| %>
+        <a href='<%= "https:\\www.twitter.com/#{tweet[:from]}/status/#{tweet[:id]}" %>'>
+          <div class= "<%= (ind == 0 ? 'celula primaria' : 'celula') %>">
+            <p class="titulo">
+              <%= tweet[:from] %>
+            </p>
+            <p class="">
+              <%= tweet[:text] %>
+            </p>
+          </div>
+        </a>
+        <% end %>
+      </div>
+    </div>
+  </body>
 </html>
