@@ -39,13 +39,16 @@ h1 {
 .celula .titulo{
     height: 70px;
     max-height: 70px;
+    margin-top: 10px;
+    display:inline-block;
 }
 
 .celula p{
     font-family: abadi_mt_condensed_light;
     color: white;
     font-size: 15px;
-    margin: 7px;
+    margin: -5px;
+    margin-left: 10px;
     text-align: left;
 }
 

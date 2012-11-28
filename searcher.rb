@@ -14,7 +14,7 @@ end
 get '/q/:word' do
   @tweets = []
   @googles = []
-  tw_search("http://search.twitter.com/search.json?q=#{params[:word]}")
+  tw_search("http://search.twitter.com/search.json?rpp=4&q=#{params[:word]}")
   goo_search(params[:word])
   erb :index
 end
@@ -28,13 +28,13 @@ def tw_search(url)
 
   hash = JSON.parse(req.to_s)
   hash["results"].each do |tweet|
-    @tweets << {from: tweet["from_user"], text: tweet["text"]}
+    @tweets << {from: tweet["from_user"], text: tweet["text"], id: tweet["id"]}
   end
 end
 
 def goo_search(word)
   GoogleAjax.referer = "Searcher"
   GoogleAjax::Search.web(word)[:results].each do |goo|
-    @googles << {title: goo[:title], content: goo[:content]}
+    @googles << {title: goo[:title], content: goo[:content], url: goo[:unescaped_url]}
   end
 end
